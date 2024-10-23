@@ -1,10 +1,13 @@
-/** @type {import('jest').Config} */
-module.exports = {
+import type { Config } from "jest";
+
+/** @type {Config} */
+const config: Config = {
   preset: "ts-jest",
-  testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  testEnvironment: "jest-environment-jsdom", // 명시적으로 지정
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   moduleNameMapper: {
-    // 경로 별칭을 사용하고 있다면, 아래와 같이 설정
     "@/(.*)$": "<rootDir>/src/$1",
   },
 };
+
+export default config;
