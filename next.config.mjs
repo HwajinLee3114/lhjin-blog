@@ -26,9 +26,8 @@ const mdxOptions = {
 
 // Next.js 설정
 const nextConfig = {
+  reactStrictMode: true,
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 };
 
-// MDX와 Next.js 설정 통합 및 Contentlayer 추가
-const withMDX = mdx(nextConfig, mdxOptions);
-export default withContentlayer(withMDX);
+export default withContentlayer(nextConfig);

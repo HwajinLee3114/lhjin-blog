@@ -1,6 +1,6 @@
+// contentlayer.config.ts
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
-
-const Post = defineDocumentType(() => ({
+var Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `**/*.mdx`,
   fields: {
@@ -9,11 +9,14 @@ const Post = defineDocumentType(() => ({
     category: { type: "string", required: true },
     tag: { type: "list", of: { type: "string" }, required: false },
     thumb: { type: "string", required: false },
-    createAt: { type: "date", required: true },
-  },
+    createAt: { type: "date", required: true }
+  }
 }));
-
-export default makeSource({
+var contentlayer_config_default = makeSource({
   contentDirPath: "posts",
-  documentTypes: [Post],
+  documentTypes: [Post]
 });
+export {
+  contentlayer_config_default as default
+};
+//# sourceMappingURL=compiled-contentlayer-config-XOSHOGYE.mjs.map
