@@ -9,7 +9,8 @@ var Post = defineDocumentType(() => ({
     category: { type: "string", required: true },
     tag: { type: "list", of: { type: "string" }, required: false },
     thumb: { type: "string", required: false },
-    createAt: { type: "date", required: true }
+    createAt: { type: "date", required: true },
+    slug: { type: "string", required: true }
   }
 }));
 var contentlayer_config_default = makeSource({
@@ -19,4 +20,4 @@ var contentlayer_config_default = makeSource({
 export {
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-XOSHOGYE.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-C5HF2AZC.mjs.map

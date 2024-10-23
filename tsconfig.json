@@ -30,7 +30,7 @@
     ".next/types/**/*.ts",
     "__tests__/**/*.ts",
     "__tests__/**/*.tsx",
-    ".contentlayer/generated",
+    ".contentlayer/generated"
   ],
   "exclude": ["node_modules"]
 }

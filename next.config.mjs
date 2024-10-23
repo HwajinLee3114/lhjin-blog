@@ -30,4 +30,6 @@ const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 };
 
-export default withContentlayer(nextConfig);
+// MDX와 Contentlayer 통합
+const withMDX = mdx(nextConfig, mdxOptions);
+export default withContentlayer(withMDX);

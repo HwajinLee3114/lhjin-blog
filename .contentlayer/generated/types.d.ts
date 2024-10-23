@@ -19,6 +19,7 @@ export type Post = {
   tag?: string[] | undefined
   thumb?: string | undefined
   createAt: IsoDateTimeString
+  slug: string
   /** Markdown file body */
   body: Markdown
 
