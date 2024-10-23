@@ -2,6 +2,7 @@
 import mdx from "@next/mdx";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeHighlight from "rehype-highlight";
+import { withContentlayer } from "next-contentlayer";
 
 const mdxOptions = {
   extension: /\.mdx?$/,
@@ -23,8 +24,11 @@ const mdxOptions = {
   },
 };
 
+// Next.js 설정
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 };
 
-export default mdx(nextConfig, mdxOptions);
+// MDX와 Next.js 설정 통합 및 Contentlayer 추가
+const withMDX = mdx(nextConfig, mdxOptions);
+export default withContentlayer(withMDX);
