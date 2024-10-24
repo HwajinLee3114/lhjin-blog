@@ -40,7 +40,7 @@ npm test
 
 ## 추가 라이브러리
 
-- **Contentlayer**: 콘텐츠 관리를 위한 라이브러리
+- **MDX**: 콘텐츠 관리를 위한 라이브러리
 - **rehype-highlight**: Markdown 코드 블록을 아름답게 꾸미기 위한 라이브러리
 - **rehype-pretty-code**: 코드 블록의 스타일을 개선하는 라이브러리
 - **Shiki**: 다양한 언어의 문법 하이라이팅을 지원하는 라이브러리

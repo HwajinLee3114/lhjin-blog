@@ -20,7 +20,6 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "contentlayer/generated": ["./.contentlayer/generated"]
     }
   },
   "include": [
@@ -30,7 +29,6 @@
     ".next/types/**/*.ts",
     "__tests__/**/*.ts",
     "__tests__/**/*.tsx",
-    ".contentlayer/generated"
   ],
   "exclude": ["node_modules"]
 }
