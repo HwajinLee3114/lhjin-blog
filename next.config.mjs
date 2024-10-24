@@ -1,11 +1,21 @@
 import nextMDX from "@next/mdx";
-import rehypePrismPlus from "rehype-prism-plus";
+import rehypePrettyCode from "rehype-pretty-code";
 
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [],
-    rehypePlugins: [rehypePrismPlus],
+    rehypePlugins: [
+      [
+        rehypePrettyCode,
+        {
+          theme: "solarized-light",
+          // 예: useBr: true,  // <br> 태그 사용
+          // 예: ignoreEmptyLines: true, // 빈 줄 무시
+          html: true, // HTML 출력을 활성화
+        },
+      ],
+    ],
   },
 });
 
