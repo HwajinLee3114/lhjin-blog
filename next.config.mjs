@@ -1,10 +1,11 @@
 import nextMDX from "@next/mdx";
+import rehypePrismPlus from "rehype-prism-plus";
 
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [],
-    rehypePlugins: [],
+    rehypePlugins: [rehypePrismPlus],
   },
 });
 
