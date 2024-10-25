@@ -23,7 +23,9 @@
     "rehype": "^13.0.2",
     "rehype-highlight": "^7.0.1",
     "rehype-pretty-code": "^0.14.0",
-    "shiki": "^1.22.0"
+    "shiki": "^1.22.0",
+    "styled-components": "^6.1.13",
+    "zustand": "^5.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.2",
@@ -33,6 +35,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/styled-components": "^5.1.34",
     "eslint": "^8",
     "eslint-config-next": "14.2.16",
     "eslint-config-prettier": "^9.1.0",

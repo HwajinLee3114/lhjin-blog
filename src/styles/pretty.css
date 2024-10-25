@@ -1,10 +1,10 @@
 /* 💻 Code block */
- 
+
 /* pretty-code (shiki) recommend */
 .prose pre > code {
   display: grid;
 }
- 
+
 /* Fenced Code block - hide horizontal scrollbar: webkit */
 .prose pre::-webkit-scrollbar {
   display: none;
@@ -13,7 +13,7 @@
 .prose pre {
   scrollbar-width: none;
 }
- 
+
 /* Fenced Code block - line style */
 .prose pre span[data-line] {
   @apply inline-block px-4 py-0.5 leading-snug;
