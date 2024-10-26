@@ -10,7 +10,6 @@ type StyleProviderProps = {
 
 const StyleProvider = ({ children }: StyleProviderProps): JSX.Element => {
   const { theme } = useThemeStore();
-  console.info("theme  : ", theme);
 
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };

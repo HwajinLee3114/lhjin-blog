@@ -4,12 +4,21 @@ import useThemeStore from "@/store/useThemeStore";
 
 const ThemeSwitcher: React.FC = () => {
   const setTheme = useThemeStore((state) => state.setTheme);
+  const currTheme = useThemeStore((state) => state.currentThemeOption);
 
   return (
-    <div>
-      <button onClick={() => setTheme("light")}>Light Mode</button>
-      <button onClick={() => setTheme("dark")}>Dark Mode</button>
-      <button onClick={() => setTheme("custom")}>Custom Mode</button>
+    <div className="flex  gap-3">
+      {currTheme !== "light" && (
+        <button onClick={() => setTheme("light")}>Light</button>
+      )}
+
+      {currTheme !== "dark" && (
+        <button onClick={() => setTheme("dark")}>Dark</button>
+      )}
+
+      {currTheme !== "custom" && (
+        <button onClick={() => setTheme("custom")}>Custom</button>
+      )}
     </div>
   );
 };

@@ -3,8 +3,8 @@
 import "@/styles/globals.css";
 import "@/styles/pretty.css";
 import StyleProvider from "@/components/StyleProvider";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
 import GlobalStyle from "@/styles/GlobalStyle";
+import Header from "@/components/comn/Header";
 
 // export const metadata: Metadata = {
 //   title: "lhjin's blog",
@@ -16,7 +16,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="kr">
       <body>
         <StyleProvider>
-          <ThemeSwitcher />
+          <Header />
           {children}
           <GlobalStyle />
         </StyleProvider>
