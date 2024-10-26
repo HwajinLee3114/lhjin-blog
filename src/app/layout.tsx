@@ -1,10 +1,13 @@
 "use client";
 // import type { Metadata } from "next";
+
 import "@/styles/globals.css";
 import "@/styles/pretty.css";
+import React from "react";
 import StyleProvider from "@/components/StyleProvider";
 import GlobalStyle from "@/styles/GlobalStyle";
 import Header from "@/components/comn/Header";
+import Footer from "@/components/comn/Footer";
 
 // export const metadata: Metadata = {
 //   title: "lhjin's blog",
@@ -16,9 +19,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="kr">
       <body>
         <StyleProvider>
-          <Header />
-          {children}
           <GlobalStyle />
+          <Header />
+          <div className="h-full">{children}</div>
+          <Footer />
         </StyleProvider>
       </body>
     </html>

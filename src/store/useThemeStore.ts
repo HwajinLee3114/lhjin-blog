@@ -1,5 +1,5 @@
-// src/store/useThemeStore.ts
 import { create } from "zustand";
+import { persist, createJSONStorage } from "zustand/middleware";
 import { lightTheme, darkTheme, customTheme } from "@/styles/themes";
 
 type ThemeOptions = "light" | "dark" | "custom";
@@ -13,27 +13,35 @@ interface Theme {
 }
 
 interface ThemeStore {
-  theme: Theme; // 현재 테마 타입
-  currentThemeOption: ThemeOptions; // 현재 테마 옵션
+  theme: Theme;
+  currentThemeOption: ThemeOptions;
   setTheme: (option: ThemeOptions) => void;
 }
 
-const useThemeStore = create<ThemeStore>((set, get) => ({
-  theme: lightTheme, // 기본 테마
-  currentThemeOption: "light", // 기본 테마 옵션
-  setTheme: (option: ThemeOptions) => {
-    const currentOption = get().currentThemeOption;
-    if (option !== currentOption) {
-      const newTheme: Theme =
-        option === "light"
-          ? lightTheme
-          : option === "dark"
-            ? darkTheme
-            : customTheme;
+const useThemeStore = create<ThemeStore>()(
+  persist(
+    (set, get) => ({
+      theme: lightTheme,
+      currentThemeOption: (localStorage.getItem("currentThemeOption") as ThemeOptions) || "light",
+      setTheme: (option: ThemeOptions) => {
+        const currentOption = get().currentThemeOption;
+        if (option !== currentOption) {
+          const newTheme: Theme =
+            option === "light"
+              ? lightTheme
+              : option === "dark"
+                ? darkTheme
+                : customTheme;
 
-      set({ theme: newTheme, currentThemeOption: option }); // 현재 테마 옵션 업데이트
+          set({ theme: newTheme, currentThemeOption: option });
+        }
+      },
+    }),
+    {
+      name: "theme-storage",
+      storage: createJSONStorage(() => localStorage),
     }
-  },
-}));
+  )
+);
 
 export default useThemeStore;
