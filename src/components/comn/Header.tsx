@@ -6,7 +6,7 @@ import ThemeSwitcher from "../ThemeSwitcher";
 
 const Header = () => {
   return (
-    <header className="flex justify-between p-5 items-center w-full max-h-40 h-full ">
+    <header className="flex justify-between fixed top-0 p-5 items-center w-full max-h-14 h-full backdrop-blur-sm shadow-md z-50">
       <div>lhjin&apos;s blog</div>
       <ThemeSwitcher />
     </header>

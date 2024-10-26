@@ -12,7 +12,7 @@ const ThemeSwitcher: React.FC = () => {
   );
 
   if (currTheme === null) {
-    return <div>Loading...</div>;
+    return <div></div>;
   }
 
   return (
