@@ -1,13 +1,22 @@
 "use client";
 import React from "react";
 import useThemeStore from "@/store/useThemeStore";
+import { useHydration } from "@/hooks/useHydration";
 
 const ThemeSwitcher: React.FC = () => {
   const setTheme = useThemeStore((state) => state.setTheme);
-  const currTheme = useThemeStore((state) => state.currentThemeOption);
+
+  const currTheme = useHydration(
+    useThemeStore,
+    (state) => state.currentThemeOption
+  );
+
+  if (currTheme === null) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <div className="flex  gap-3">
+    <div className="flex gap-3">
       {currTheme !== "light" && (
         <button onClick={() => setTheme("light")}>
           <img
