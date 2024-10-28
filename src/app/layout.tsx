@@ -3,14 +3,14 @@
 import "@/styles/globals.css";
 import "@/styles/pretty.css";
 import React, { useEffect, useState } from "react";
-import StyleProvider from "@/components/StyleProvider";
+import StyleProvider from "@/_components/StyleProvider";
 import GlobalStyle from "@/styles/GlobalStyle";
-import Header from "@/components/comn/Header";
-import Footer from "@/components/comn/Footer";
+import Header from "@/_components/template/Header";
+import Footer from "@/_components/template/Footer";
 import { useHydration } from "@/hooks/useHydration";
 import useThemeStore from "@/store/useThemeStore";
-import Spinner from "@/components/comn/\bSpinner";
-import Overlay from "@/components/comn/Overlay";
+import Spinner from "@/_components/comn/Spinner";
+import Overlay from "@/_components/comn/Overlay";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const currTheme = useHydration(
@@ -36,7 +36,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <StyleProvider>
           <GlobalStyle />
           <Header />
-          <div className="h-full flex-grow">{children}</div>
+          <div className="h-full flex-grow mt-14 p-5">{children}</div>
           <Footer />
         </StyleProvider>
       </body>
