@@ -5,12 +5,12 @@ import "@/styles/pretty.css";
 import React, { useEffect, useState } from "react";
 import StyleProvider from "@/components/StyleProvider";
 import GlobalStyle from "@/styles/GlobalStyle";
-import Header from "@/components/template/Header";
+import Header from "@/components/template/header/Header";
 import Footer from "@/components/template/Footer";
 import { useHydration } from "@/hooks/useHydration";
 import useThemeStore from "@/store/useThemeStore";
-import Spinner from "@/components/comn/Spinner";
 import Overlay from "@/components/comn/Overlay";
+import Spinner from "@/components/comn/Spinner";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const currTheme = useHydration(
