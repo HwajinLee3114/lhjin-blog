@@ -2,6 +2,7 @@
 import React from "react";
 import useThemeStore from "@/store/useThemeStore";
 import { useHydration } from "@/hooks/useHydration";
+import RoundButton from "./comn/RoundButton";
 
 const ThemeSwitcher: React.FC = () => {
   const setTheme = useThemeStore((state) => state.setTheme);
@@ -16,31 +17,29 @@ const ThemeSwitcher: React.FC = () => {
   }
 
   return (
-    <div className="flex gap-3">
+    <div className="flex items-center gap-3">
       {currTheme !== "light" && (
-        <button onClick={() => setTheme("light")}>
-          <img
-            src="/images/suny-100.png"
-            alt="light mode"
-            className="w-7 h-7"
-          />
-        </button>
+        <RoundButton
+          styles="w-7 h-7"
+          event={() => setTheme("light")}
+          img={<img src="/images/suny-100.png" alt="light mode" />}
+        />
       )}
 
       {currTheme !== "dark" && (
-        <button onClick={() => setTheme("dark")}>
-          <img src="/images/moon-100.png" alt="dark mode" className="w-7 h-7" />
-        </button>
+        <RoundButton
+          styles="w-7 h-7"
+          event={() => setTheme("dark")}
+          img={<img src="/images/moon-100.png" alt="dark mode" />}
+        />
       )}
 
       {currTheme !== "custom" && (
-        <button onClick={() => setTheme("custom")}>
-          <img
-            src="/images/snowb-100.png"
-            alt="custom mode"
-            className="w-8 h-8"
-          />
-        </button>
+        <RoundButton
+          styles="w-8 h-8"
+          event={() => setTheme("custom")}
+          img={<img src="/images/snowb-100.png" alt="custom mode" />}
+        />
       )}
     </div>
   );

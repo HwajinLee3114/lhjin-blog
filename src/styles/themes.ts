@@ -23,8 +23,8 @@ export const darkTheme: Theme = {
 
 export const customTheme: Theme = {
   colors: {
-    background: "#f0e68c",
+    background: "#F6F1E3",
     text: "#333333",
-    primary: "#8e44ad",
+    primary: "#FAAD1A",
   },
 };
