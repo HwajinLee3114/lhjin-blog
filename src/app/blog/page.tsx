@@ -11,10 +11,8 @@ export default function page() {
     <div className="flex gap-3 h-full w-full">
       <Categories posts={[]} />
       <div className="flex-1">
-        <p className="font-bold text-xl">All Posts ({posts.length})</p>
-        <ul>
-          <BlogLists posts={posts} />
-        </ul>
+        <p className="font-bold text-xl mb-3">All Posts ({posts.length})</p>
+        <BlogLists posts={posts} />
       </div>
       <aside className="w-40">
         <div>sdf</div>

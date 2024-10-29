@@ -17,10 +17,13 @@ export function getSortedPostsData() {
 
       if (metadataMatch) {
         const metadata = eval(`(${metadataMatch[1]})`);
+        const hashtags = metadata.hashtag || [];
+
         return [
           {
             id: category,
             ...metadata,
+            hashtag: hashtags,
           },
         ];
       }

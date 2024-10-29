@@ -6,5 +6,10 @@ export interface Post {
   publishDate: string;
   posterImage: string;
   categories: string[];
-  hashtag?: string[];
+  hashtag?: Tag[];
+}
+
+export interface Tag {
+  tag: string;
+  color?: string;
 }
