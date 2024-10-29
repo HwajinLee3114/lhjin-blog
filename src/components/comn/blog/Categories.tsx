@@ -9,13 +9,13 @@ interface CategoriesProps {
 const Categories = ({ posts, selectCategorie }: CategoriesProps) => {
   const categories: { [key: string]: number } = posts.reduce(
     (acc: { [key: string]: number }, post) => {
-      post.categories.forEach((category) => {
-        if (acc[category]) {
-          acc[category]++;
-        } else {
-          acc[category] = 1;
-        }
-      });
+      const category = post.category;
+
+      if (acc[category]) {
+        acc[category]++;
+      } else {
+        acc[category] = 1;
+      }
       return acc;
     },
     { 전체: posts.length }
