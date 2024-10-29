@@ -1,7 +1,7 @@
-import { getSortedPostsData } from "@/lib/posts";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import fs from "fs";
 import path from "path";
+import { getSortedPostsData } from "@/utils/blog/getPosts";
 
 export async function generateStaticParams() {
   const posts = getSortedPostsData();
