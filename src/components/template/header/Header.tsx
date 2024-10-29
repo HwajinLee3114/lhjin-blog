@@ -16,7 +16,7 @@ const Header = () => {
         <div className="cursor-pointer font-bold">lhjin&apos;s blog</div>
       </Link>
       <Menu />
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 w-28">
         <ThemeSwitcher />
         <Link href="/" className="flex items-center">
           <RoundButton

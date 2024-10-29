@@ -2,16 +2,9 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { lightTheme, darkTheme, customTheme } from "@/styles/themes";
+import { Theme } from "@/types/theme";
 
 type ThemeOptions = "light" | "dark" | "custom";
-
-interface Theme {
-  colors: {
-    background: string;
-    text: string;
-    primary: string;
-  };
-}
 
 interface ThemeStore {
   theme: Theme;
@@ -24,7 +17,7 @@ const useThemeStore = create<ThemeStore>()(
     (set, get) => {
       const initialThemeOption: ThemeOptions =
         typeof window !== "undefined" &&
-        (localStorage.getItem("currentThemeOption") as ThemeOptions)
+          (localStorage.getItem("currentThemeOption") as ThemeOptions)
           ? (localStorage.getItem("currentThemeOption") as ThemeOptions)
           : "light"; // 서버 사이드에서는 기본값으로 "light" 사용
 

@@ -16,8 +16,6 @@ const MenuItem: React.FC<MenuItemProps> = ({ href, label }) => {
   const pathname = usePathname();
   const isActive = pathname === href || pathname.startsWith(href);
 
-  // border-bottom: ${(props) =>
-  //   props.isActive ? `2px solid ${props.theme.colors.primary}` : "none"};
   return (
     <MenuLi
       className={`mr-5 ${isActive ? "pb-1 border-solid border-b-2 font-bold" : ""}`}

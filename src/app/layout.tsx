@@ -11,6 +11,7 @@ import { useHydration } from "@/hooks/useHydration";
 import useThemeStore from "@/store/useThemeStore";
 import Overlay from "@/components/comn/Overlay";
 import Spinner from "@/components/comn/Spinner";
+import CustomStyle from "@/styles/CustomStyle";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const currTheme = useHydration(
@@ -35,6 +36,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         )}
         <StyleProvider>
           <GlobalStyle />
+          <CustomStyle />
           <Header />
           <div className="h-full flex-grow mt-14 p-5">{children}</div>
           <Footer />
