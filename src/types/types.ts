@@ -5,7 +5,7 @@ export interface Post {
   description: string;
   publishDate: string;
   posterImage: string;
-  categories: string[];
+  category: string;
   hashtag?: Tag[];
 }
 

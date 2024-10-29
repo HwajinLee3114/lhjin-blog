@@ -21,19 +21,19 @@ const BlogLists: React.FC<BlogListsProps> = ({ posts }) => {
           description,
           publishDate,
           posterImage,
-          categories,
+          category,
           hashtag,
         }) => (
           <li key={id} className="mb-4 p-4 bg-slate-200 rounded-md">
             <Link href={`/blog/${id}`}>
               <div className="flex justify-between">
-                <div>
-                  <h2 className="font-bold">{title}</h2>
+                <div className="flex flex-col gap-1">
                   <small>
                     {dayjs(publishDate)
                       .locale("ko")
                       .format("YYYY년 MM월 DD일 (dddd)")}
                   </small>
+                  <span className="font-bold text-2xl">{title}</span>
                   <p>{description}</p>
                   {hashtag && hashtag.length > 0 && (
                     <div className="flex gap-2">
@@ -42,16 +42,16 @@ const BlogLists: React.FC<BlogListsProps> = ({ posts }) => {
                       ))}
                     </div>
                   )}
+                  <div className="font-bold pt-2 w-fit">{category}</div>
                 </div>
                 {posterImage && (
                   <img
                     src={posterImage}
                     alt={title}
-                    className="rounded-md h-32 max-w-56 w-full bg-white"
+                    className="rounded-md h-40 max-w-56 w-full bg-white"
                   />
                 )}
               </div>
-              <div className="font-bold px-2">{categories.join(", ")}</div>
             </Link>
           </li>
         )

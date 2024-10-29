@@ -4,8 +4,8 @@ import path from "path";
 const postsDirectory = path.join(process.cwd(), "src/app/blog/(posts)");
 
 export function getSortedPostsData() {
-  const categories = fs.readdirSync(postsDirectory);
-  const allPostsData = categories.flatMap((category) => {
+  const categoryFolders = fs.readdirSync(postsDirectory);
+  const allPostsData = categoryFolders.flatMap((category) => {
     const categoryPath = path.join(postsDirectory, category);
     const filePath = path.join(categoryPath, "page.mdx");
 
