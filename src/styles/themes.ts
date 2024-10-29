@@ -3,7 +3,7 @@ import { Theme } from "@/types/theme";
 export const lightTheme: Theme = {
   colors: {
     background1: '#f5faff', // 메인 배경
-    background2: '#e0e6f6', // 블로그 리스트 항목 배경(.l_blog-item)
+    background2: '#e9edf6', // 블로그 리스트 항목 배경(.l_blog-item)
     background3: '#E4E6E8',
     background4: '#f9f9f9',
 
@@ -52,7 +52,7 @@ export const darkTheme: Theme = {
 export const customTheme: Theme = {
   colors: {
     background1: "#fffaf5",
-    background2: "#F6F1E3", //
+    background2: "#fff8e4",
     background3: "#ffffff",
     background4: "#ffffff",
     background5: "#ffffff",
