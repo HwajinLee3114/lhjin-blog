@@ -22,7 +22,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ href, label }) => {
     <MenuLi
       className={`mr-5 ${isActive ? "pb-1 border-solid border-b-2 font-bold" : ""}`}
     >
-      <Link href={href} className="hover:font-bold px-4 py-2">
+      <Link href={href} className="text-sm hover:font-bold px-4 py-2">
         {label}
       </Link>
     </MenuLi>

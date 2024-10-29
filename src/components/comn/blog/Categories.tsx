@@ -24,7 +24,7 @@ const Categories = ({ posts, selectCategorie }: CategoriesProps) => {
   return (
     <aside className="mt-2 lg:mt-0 lg:w-52 xl:w-64">
       <div className="hidden border-b border-solid border-White-line py-3 lg:block dark:border-dark-line">
-        카테고리 목록
+        카테고리 모아보기
       </div>
       <ul className="hidden lg:block">
         {Object.entries(categories).map(([categorie, count]) => (

@@ -26,7 +26,7 @@ const BlogLists: React.FC<BlogListsProps> = ({ posts }) => {
         }) => (
           <li key={id} className="mb-4 p-4 bg-slate-200 rounded-md">
             <Link href={`/blog/${id}`}>
-              <div className="flex justify-between gap-2">
+              <div className="flex justify-between gap-2 flex-col-reverse md:flex-row">
                 <div className="flex flex-col justify-around flex-1 max-w-96">
                   <small>
                     {dayjs(publishDate)
@@ -52,7 +52,7 @@ const BlogLists: React.FC<BlogListsProps> = ({ posts }) => {
                   <img
                     src={posterImage}
                     alt={title}
-                    className="rounded-md h-40 max-w-56 w-full bg-white"
+                    className="rounded-md h-40 md:max-w-56 w-full bg-white"
                   />
                 )}
               </div>

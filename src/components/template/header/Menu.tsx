@@ -3,9 +3,9 @@ import MenuItem from "./MenuItem";
 
 const Menu: React.FC = () => {
   const menuItems = [
-    { href: "/blog", label: "Blog" },
-    { href: "/project", label: "Projects" },
-    { href: "/resume", label: "Resume" },
+    { href: "/blog", label: "BLOG" },
+    { href: "/projects", label: "PROJECTS" },
+    { href: "/resume", label: "RESUME" },
   ];
 
   return (
