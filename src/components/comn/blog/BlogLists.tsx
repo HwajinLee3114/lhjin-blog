@@ -24,7 +24,7 @@ const BlogLists: React.FC<BlogListsProps> = ({ posts }) => {
           category,
           hashtag,
         }) => (
-          <li key={id} className="mb-4 p-4 bg-slate-200 rounded-md">
+          <li key={id} className="mb-4 p-4 l_blog-item rounded-md shadow-md">
             <Link href={`/blog/${id}`}>
               <div className="flex justify-between gap-2 flex-col-reverse md:flex-row">
                 <div className="flex flex-col justify-around flex-1 max-w-96">

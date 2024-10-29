@@ -13,6 +13,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
+
+  .l_blog-item{
+    background-color: ${({ theme }) => theme.colors.background};
+  }
 `;
 
 export default GlobalStyle;
