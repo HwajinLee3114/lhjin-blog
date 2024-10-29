@@ -26,15 +26,19 @@ const BlogLists: React.FC<BlogListsProps> = ({ posts }) => {
         }) => (
           <li key={id} className="mb-4 p-4 bg-slate-200 rounded-md">
             <Link href={`/blog/${id}`}>
-              <div className="flex justify-between">
-                <div className="flex flex-col gap-1">
+              <div className="flex justify-between gap-2">
+                <div className="flex flex-col justify-around flex-1 max-w-96">
                   <small>
                     {dayjs(publishDate)
                       .locale("ko")
                       .format("YYYY년 MM월 DD일 (dddd)")}
                   </small>
-                  <span className="font-bold text-2xl">{title}</span>
-                  <p>{description}</p>
+                  <span className="font-bold text-2xl overflow-hidden text-ellipsis whitespace-nowrap">
+                    {title}
+                  </span>
+                  <p className="overflow-hidden text-ellipsis whitespace-nowrap">
+                    {description}
+                  </p>
                   {hashtag && hashtag.length > 0 && (
                     <div className="flex gap-2">
                       {hashtag.map((tag, idx) => (
