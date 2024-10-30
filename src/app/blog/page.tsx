@@ -1,10 +1,12 @@
 import BlogLists from "@/components/comn/blog/BlogLists";
 import Categories from "@/components/comn/blog/Categories";
 import { getSortedPostsData } from "@/utils/blog/getPosts";
-import React from "react";
+import { useState } from "react";
 
-export default function page() {
-  const posts = getSortedPostsData();
+export default async function Page() {
+  const posts = await getSortedPostsData();
+  const [selectedCategory, setSelectedCategory] = useState<string>("전체");
+
   return (
     <div className="flex gap-5 h-full w-full flex-col md:flex-row">
       <Categories posts={posts} />
