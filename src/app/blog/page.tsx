@@ -7,7 +7,7 @@ import { Post } from "@/types/types";
 
 export default function Page() {
   const [posts, setPosts] = useState<Post[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>("전체");
+  const [selectedCategory, setSelectedCategory] = useState<string>("ALL");
 
   useEffect(() => {
     const fetchData = async () => {

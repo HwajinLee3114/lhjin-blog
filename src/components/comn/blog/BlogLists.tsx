@@ -11,7 +11,7 @@ interface BlogListsProps {
 
 const BlogLists: React.FC<BlogListsProps> = ({ posts, selectedCategory }) => {
   const filteredPosts =
-    selectedCategory === "전체"
+    selectedCategory === "ALL"
       ? posts
       : posts.filter((post) => post.category === selectedCategory);
 
