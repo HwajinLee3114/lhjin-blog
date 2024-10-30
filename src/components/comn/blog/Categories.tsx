@@ -29,7 +29,7 @@ const Categories: React.FC<CategoriesProps> = ({
 
   return (
     <aside className="mt-2 lg:mt-0 lg:w-52 xl:w-64">
-      <div className="font-bold text-xl px-2 py-3">CATEGORYS</div>
+      <div className="font-bold text-xl px-2 py-3">CATEGORIES</div>
       <ul className="flex flex-col gap-2 p-2">
         {Object.entries(categories).map(([category, count]) => (
           <Link
