@@ -12,6 +12,23 @@ import useThemeStore from "@/store/useThemeStore";
 import Overlay from "@/components/comn/Overlay";
 import Spinner from "@/components/comn/Spinner";
 import CustomStyle from "@/styles/CustomStyle";
+import { Metadata } from "next";
+
+// export const metadata: Metadata = {
+//   title: "이화진",
+//   description: "이화진 홈페이지",
+//   keywords: [
+//     "이화진",
+//     "프로젝트",
+//     "포트폴리오",
+//     "블로그",
+//     "프론트엔드",
+//     "개발자",
+//   ],
+//   authors: [{ name: "이화진" }],
+//   publisher: "이화진",
+//   referrer: "origin-when-cross-origin",
+// };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const currTheme = useHydration(

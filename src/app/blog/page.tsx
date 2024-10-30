@@ -4,6 +4,12 @@ import { useEffect, useState } from "react";
 import BlogLists from "@/components/comn/blog/BlogLists";
 import Categories from "@/components/comn/blog/Categories";
 import { Post } from "@/types/types";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "이화진 | Blog",
+  description: "이화진 Blog 메인 페이지",
+};
 
 export default function Page() {
   const [posts, setPosts] = useState<Post[]>([]);
