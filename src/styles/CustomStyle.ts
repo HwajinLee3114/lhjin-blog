@@ -1,7 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 
 const CustomStyle = createGlobalStyle`
-  .l_blog-item, .l_ctg-item {
+  .l_blog-item {
+    border-color: ${({ theme }) => theme.colors.primary};
+  }
+
+  .l_blog-item .title {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+
+  .l_ctg-item {
     background-color: ${({ theme }) => theme.colors.background2};
   }
 

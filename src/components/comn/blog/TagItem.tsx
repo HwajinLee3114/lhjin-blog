@@ -18,7 +18,7 @@ export const TagItem: React.FC<TagItemProps> = ({ tag }) => {
     : "text-blue-800";
   return (
     <span
-      className={`inline-block text-sm px-3 py-1 rounded-full ${bgColor} ${textColor}`}
+      className={`inline-block text-xs px-3 py-1 rounded-full ${bgColor} ${textColor}`}
     >
       {tag.tag}
     </span>

@@ -30,12 +30,12 @@ export default function Page() {
         <p className="font-bold text-xl mb-3">모아보기 ({posts.length})</p>
         <BlogLists posts={posts} selectedCategory={selectedCategory} />
       </div>
-      <aside className="w-40 lg:w-64">
+      {/* <aside className="w-40 lg:w-64">
         <div>sdf</div>
         <div>sdf</div>
         <div>sdf</div>
         <div>sdf</div>
-      </aside>
+      </aside> */}
     </div>
   );
 }
