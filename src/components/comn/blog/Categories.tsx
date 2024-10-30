@@ -1,16 +1,19 @@
 "use client";
-
-import { useState } from "react";
 import { Post } from "@/types/types";
+import React from "react";
 import Link from "next/link";
 
 interface CategoriesProps {
   posts: Post[];
+  selectCategory: string;
+  setSelectCategory: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Categories = ({ posts }: CategoriesProps) => {
-  const [selectedCategory, setSelectedCategory] = useState("전체");
-
+const Categories: React.FC<CategoriesProps> = ({
+  posts,
+  selectCategory,
+  setSelectCategory,
+}) => {
   const categories = posts.reduce(
     (acc: { [key: string]: number }, post) => {
       const category = post.category;
@@ -21,12 +24,12 @@ const Categories = ({ posts }: CategoriesProps) => {
   );
 
   const handleCategoryClick = (category: string) => {
-    setSelectedCategory(category);
+    setSelectCategory(category); // 카테고리 클릭 시 상태 업데이트
   };
 
   return (
-    <aside className="mt-2 lg:mt-0 lg:w-52">
-      <div className="hidden border-b border-solid py-3 lg:block">
+    <aside className="mt-2 lg:mt-0 lg:w-52 xl:w-64">
+      <div className="hidden border-b border-solid py-3 lg:blog">
         카테고리 모아보기
       </div>
       <ul className="flex flex-col gap-2">
@@ -37,7 +40,7 @@ const Categories = ({ posts }: CategoriesProps) => {
             onClick={() => handleCategoryClick(category)}
           >
             <li
-              className={`flex gap-2 px-2 py-3 rounded-md l_hover-custom ${selectedCategory === category ? "selected" : ""}`}
+              className={`flex gap-2 px-2 py-3 rounded-md l_hover-custom ${selectCategory === category ? "selected" : ""}`}
             >
               {category}
               <span>({count})</span>

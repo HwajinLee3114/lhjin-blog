@@ -1,15 +1,15 @@
 "use client";
+
 import { Post } from "@/types/types";
-import React, { useState } from "react";
+import React from "react";
 import ListItem from "./ListItem";
 
 interface BlogListsProps {
   posts: Post[];
+  selectedCategory: string;
 }
 
-const BlogLists: React.FC<BlogListsProps> = ({ posts }) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("전체");
-
+const BlogLists: React.FC<BlogListsProps> = ({ posts, selectedCategory }) => {
   const filteredPosts =
     selectedCategory === "전체"
       ? posts
