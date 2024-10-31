@@ -45,7 +45,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <html lang="kr">
-      <body className="h-screen">
+      <body className="flex flex-col min-h-screen">
         {isLoading && (
           <Overlay isVisible={isLoading}>
             <Spinner />
@@ -55,7 +55,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <GlobalStyle />
           <CustomStyle />
           <Header />
-          <div className="h-full flex-grow mt-14 p-5">{children}</div>
+          <div className="h-full flex-1 mt-14 p-5">{children}</div>
           <Footer />
         </StyleProvider>
       </body>
