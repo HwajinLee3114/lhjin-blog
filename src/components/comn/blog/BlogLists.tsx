@@ -7,9 +7,14 @@ import ListItem from "./ListItem";
 interface BlogListsProps {
   posts: Post[];
   selectedCategory: string;
+  currPage: number;
 }
 
-const BlogLists: React.FC<BlogListsProps> = ({ posts, selectedCategory }) => {
+const BlogLists: React.FC<BlogListsProps> = ({
+  posts,
+  selectedCategory,
+  currPage,
+}) => {
   const filteredPosts =
     selectedCategory === "ALL"
       ? posts
