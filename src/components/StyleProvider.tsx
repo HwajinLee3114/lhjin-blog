@@ -1,4 +1,3 @@
-"use client";
 import { ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
 import useThemeStore from "@/store/useThemeStore"; // Zustand 스토어 임포트
