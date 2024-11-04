@@ -27,7 +27,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="kr">
       <body className="flex flex-col min-h-screen">
-        <LayoutContainer children={children} />
+        <LayoutContainer>{children}</LayoutContainer>
       </body>
     </html>
   );

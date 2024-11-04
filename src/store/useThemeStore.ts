@@ -17,7 +17,7 @@ const useThemeStore = create<ThemeStore>()(
     (set, get) => {
       const initialThemeOption: ThemeOptions =
         typeof window !== "undefined" &&
-          (localStorage.getItem("currentThemeOption") as ThemeOptions)
+        (localStorage.getItem("currentThemeOption") as ThemeOptions)
           ? (localStorage.getItem("currentThemeOption") as ThemeOptions)
           : "light"; // 서버 사이드에서는 기본값으로 "light" 사용
 

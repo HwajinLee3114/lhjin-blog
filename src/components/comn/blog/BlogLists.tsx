@@ -5,13 +5,13 @@ import ListItem from "./ListItem";
 interface BlogListsProps {
   posts: Post[];
   selectedCategory: string;
-  currPage: number;
+  // currPage: number;
 }
 
 const BlogLists: React.FC<BlogListsProps> = ({
   posts,
   selectedCategory,
-  currPage,
+  // currPage,
 }) => {
   const filteredPosts =
     selectedCategory === "ALL"

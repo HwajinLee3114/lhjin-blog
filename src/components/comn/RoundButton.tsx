@@ -9,7 +9,7 @@ interface RoundButtonProp {
 export default function RoundButton({ event, img, styles }: RoundButtonProp) {
   return (
     <button className={styles} onClick={event}>
-      {img}
+      {React.isValidElement(img) ? img : <></>}
     </button>
   );
 }

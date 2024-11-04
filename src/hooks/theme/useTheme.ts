@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { lightTheme, darkTheme, customTheme } from "@/styles/themes";
 import { Theme } from "@/types/theme";
-import { DefaultTheme, ThemeContext } from 'styled-components';
+import { DefaultTheme, ThemeContext } from "styled-components";
 
 type ThemeOptions = "light" | "dark" | "custom";
 
@@ -29,7 +29,7 @@ const useTheme = () => {
 
 export default useTheme;
 
-export const useThemeColors = (): DefaultTheme['color'] => {
-  const theme = useContext(ThemeContext) || { color: { primary: '#0070f3' } };
+export const useThemeColors = (): DefaultTheme["color"] => {
+  const theme = useContext(ThemeContext) || { color: { primary: "#0070f3" } };
   return theme.color;
 };
