@@ -1,6 +1,5 @@
 export type Theme = {
   colors: {
-
     background1: string;
     background2?: string;
     background3?: string;

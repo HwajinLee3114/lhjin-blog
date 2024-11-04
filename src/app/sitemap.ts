@@ -4,21 +4,14 @@ import { MetadataRoute } from "next";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const allPosts = await getSortedPostsData();
 
-  const posts = allPosts.map(post => ({
+  const posts = allPosts.map((post) => ({
     url: `https://lhjin-blog.vercel.app/blog/${post.slug}`,
-    lastModified: new Date(post.publishDate).toISOString().split('T')[0],
+    lastModified: new Date(post.publishDate).toISOString().split("T")[0],
   }));
 
-  const routes = [
-    '',
-    '/blog',
-    '/projects',
-    '/resume',
-  ].map((route => ({
+  const routes = ["", "/blog", "/projects", "/resume"].map((route) => ({
     url: `https://lhjin-blog.vercel.app/${route}`,
-    lastModified: new Date().toISOString().split('T')[0],
-  })))
-  return [
-    ...routes, ...posts
-  ]
+    lastModified: new Date().toISOString().split("T")[0],
+  }));
+  return [...routes, ...posts];
 }

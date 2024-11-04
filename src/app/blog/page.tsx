@@ -15,7 +15,7 @@ export default function Page({
 }: {
   searchParams: { [key: string]: string };
 }) {
-  const { ctg: selectCtg, page: currPage, q: query } = searchParams;
+  const { ctg: selectCtg, page: currPage } = searchParams;
   const posts = getSortedPostsData();
   const totalPages = Math.ceil(posts.length / PER_PAGE_COUNT);
 
@@ -31,12 +31,12 @@ export default function Page({
         <BlogLists
           posts={currPosts}
           selectedCategory={selectCtg || "ALL"}
-          currPage={Number(currPage || 1)}
+          // currPage={Number(currPage || 1)}
         />
         <Pagination
           currPage={Number(currPage || 1)}
           totalPages={totalPages}
-          perPage={PER_PAGE_COUNT}
+          // perPage={PER_PAGE_COUNT}
         />
       </div>
       {/* <aside className="w-40 lg:w-64">

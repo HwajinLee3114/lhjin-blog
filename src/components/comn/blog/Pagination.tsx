@@ -6,13 +6,13 @@ import React from "react";
 interface PaginationProps {
   currPage: number;
   totalPages: number;
-  perPage: number;
+  // perPage: number;
 }
 
 export const Pagination: React.FC<PaginationProps> = ({
   currPage,
   totalPages,
-  perPage,
+  // perPage,
 }) => {
   const router = useRouter();
   const serachParams = useSearchParams();
