@@ -1,30 +1,27 @@
-/** @type {import('next').NextConfig} */
-import mdx from "@next/mdx";
+import nextMDX from "@next/mdx";
 import rehypePrettyCode from "rehype-pretty-code";
-import rehypeHighlight from "rehype-highlight";
 
-const mdxOptions = {
+const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
+    remarkPlugins: [],
     rehypePlugins: [
       [
         rehypePrettyCode,
         {
-          theme: "github-light",
-          onVisitLine(node) {
-            if (node.children.length === 0) {
-              node.children.push({ type: "text", value: " " });
-            }
-          },
+          theme: "solarized-light",
+          // 예: useBr: true,  // <br> 태그 사용
+          // 예: ignoreEmptyLines: true, // 빈 줄 무시
+          html: true, // HTML 출력을 활성화
         },
       ],
-      rehypeHighlight,
     ],
   },
-};
+});
 
 const nextConfig = {
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  reactStrictMode: true,
 };
 
-export default mdx(nextConfig, mdxOptions);
+export default withMDX(nextConfig);

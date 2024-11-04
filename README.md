@@ -1,4 +1,4 @@
-```markdown
+````markdown
 # LHJin Blog
 
 이 프로젝트는 Next.js와 TypeScript를 사용하여 개인 블로그를 구현한 것입니다. 이 블로그는 정적 사이트 생성(SSG)을 통해 빠른 성능을 제공합니다.
@@ -18,6 +18,7 @@
 git clone <repository-url>
 cd lhjin-blog
 ```
+````
 
 ### 2. 패키지 설치
 
@@ -39,7 +40,7 @@ npm test
 
 ## 추가 라이브러리
 
-- **Contentlayer**: 콘텐츠 관리를 위한 라이브러리
+- **MDX**: 콘텐츠 관리를 위한 라이브러리
 - **rehype-highlight**: Markdown 코드 블록을 아름답게 꾸미기 위한 라이브러리
 - **rehype-pretty-code**: 코드 블록의 스타일을 개선하는 라이브러리
 - **Shiki**: 다양한 언어의 문법 하이라이팅을 지원하는 라이브러리
@@ -56,15 +57,16 @@ npm test
 ## Jest 설정
 
 - **jest.config.ts** 파일:
+
   ```typescript
-  import type { Config } from 'jest';
+  import type { Config } from "jest";
 
   const config: Config = {
-    preset: 'ts-jest',
-    testEnvironment: 'jest-environment-jsdom',
-    setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+    preset: "ts-jest",
+    testEnvironment: "jest-environment-jsdom",
+    setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
     moduleNameMapper: {
-      '@/(.*)$': '<rootDir>/src/$1',
+      "@/(.*)$": "<rootDir>/src/$1",
     },
   };
 
@@ -73,5 +75,5 @@ npm test
 
 - **jest.setup.ts** 파일:
   ```typescript
-  import '@testing-library/jest-dom';
+  import "@testing-library/jest-dom";
   ```

@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
   content: [
@@ -9,11 +10,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "var(--background1)",
+        foreground: "var(--foreground1)",
       },
     },
   },
-  plugins: [],
+  plugins: [typography],
 };
+
 export default config;
