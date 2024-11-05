@@ -1,3 +1,11 @@
+import { Introduction } from "@/components/comn/main/Introduction";
+import { JSLists } from "@/components/comn/main/JSLists";
+
 export default function Home() {
-  return <div>홈이야</div>;
+  return (
+    <div className="min-h-screen h-full w-full flex flex-col gap-5">
+      <Introduction />
+      <JSLists />
+    </div>
+  );
 }
