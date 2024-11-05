@@ -31,7 +31,7 @@ const ListItem: React.FC<ListItemProps> = ({ post }) => {
                 .locale("ko")
                 .format("YYYY년 MM월 DD일 (dddd)")}
             </small>
-            <span className="title font-bold text-xl overflow-hidden text-ellipsis whitespace-nowrap">
+            <span className="g_text-primary font-bold text-xl overflow-hidden text-ellipsis whitespace-nowrap">
               {title}
             </span>
             <p className="overflow-hidden text-ellipsis whitespace-nowrap">

@@ -27,7 +27,7 @@ export default function Page({
     <div className="flex gap-5 h-full w-full flex-col md:flex-row">
       <Categories posts={posts} selectCategory={selectCtg || "ALL"} />
       <div className="flex-1">
-        {/* <p className="font-bold text-xl mb-3">모아보기</p> */}
+        <p className="font-bold text-4xl p-3 g_text-primary">Blog</p>
         <BlogLists
           posts={currPosts}
           selectedCategory={selectCtg || "ALL"}

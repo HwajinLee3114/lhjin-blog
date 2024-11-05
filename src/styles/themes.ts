@@ -13,7 +13,7 @@ export const lightTheme: Theme = {
     border4: "#343a40",
 
     text1: "#626D77",
-    text2: "#414D5A",
+    text2: "#476491", // 하이라이트
     text3: "#1B2937",
     text4: "#121D27",
 
@@ -40,7 +40,7 @@ export const darkTheme: Theme = {
     border4: "#e0e0e0",
 
     text1: "#8F979E",
-    text2: "#BCC0C5",
+    text2: "#c5bcbc",
     text3: "#E4E6E8",
     text4: "#f9f9f9",
 
@@ -63,7 +63,7 @@ export const customTheme: Theme = {
     border4: "#343a40",
 
     text1: "#626D77",
-    text2: "#414D5A",
+    text2: "#b8b2af",
     text3: "#1B2937",
     text4: "#121D27",
 
