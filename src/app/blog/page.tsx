@@ -1,6 +1,7 @@
 import BlogLists from "@/components/comn/blog/BlogLists";
 import Categories from "@/components/comn/blog/Categories";
 import { Pagination } from "@/components/comn/blog/Pagination";
+import Title from "@/components/comn/main/Title";
 import { PER_PAGE_COUNT } from "@/contents/post";
 import { getSortedPostsData } from "@/utils/blog/getPosts";
 import { Metadata } from "next";
@@ -27,7 +28,7 @@ export default function Page({
     <div className="flex gap-5 h-full w-full flex-col md:flex-row">
       <Categories posts={posts} selectCategory={selectCtg || "ALL"} />
       <div className="flex-1">
-        <p className="font-bold text-4xl p-3 g_text-primary">Blog</p>
+        <Title className="g_text-primary" title="Blog" />
         <BlogLists
           posts={currPosts}
           selectedCategory={selectCtg || "ALL"}
