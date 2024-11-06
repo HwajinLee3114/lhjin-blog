@@ -9,6 +9,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "이화진 | Blog",
   description: "이화진 Blog 메인 페이지",
+  verification: {
+    google: "WGYedLKpn1zREOI5rXofXQjkcrTXjmdygEmE9EjXil8",
+  },
 };
 
 export default function Page({
