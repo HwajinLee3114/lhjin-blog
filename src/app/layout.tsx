@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   authors: [{ name: "이화진" }],
   publisher: "이화진",
   referrer: "origin-when-cross-origin",
+  verification: {
+    google: "WGYedLKpn1zREOI5rXofXQjkcrTXjmdygEmE9EjXil8",
+  },
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {

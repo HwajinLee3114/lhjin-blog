@@ -1,6 +1,7 @@
 import BlogLists from "@/components/comn/blog/BlogLists";
 import Categories from "@/components/comn/blog/Categories";
 import { Pagination } from "@/components/comn/blog/Pagination";
+import Title from "@/components/comn/main/Title";
 import { PER_PAGE_COUNT } from "@/contents/post";
 import { getSortedPostsData } from "@/utils/blog/getPosts";
 import { Metadata } from "next";
@@ -8,6 +9,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "이화진 | Blog",
   description: "이화진 Blog 메인 페이지",
+  verification: {
+    google: "WGYedLKpn1zREOI5rXofXQjkcrTXjmdygEmE9EjXil8",
+  },
 };
 
 export default function Page({
@@ -27,7 +31,7 @@ export default function Page({
     <div className="flex gap-5 h-full w-full flex-col md:flex-row">
       <Categories posts={posts} selectCategory={selectCtg || "ALL"} />
       <div className="flex-1">
-        <p className="font-bold text-4xl p-3 g_text-primary">Blog</p>
+        <Title className="g_text-primary" title="Blog" />
         <BlogLists
           posts={currPosts}
           selectedCategory={selectCtg || "ALL"}
